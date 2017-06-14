@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bond API Test</title>
+</head>
+<body>
+  <div id="append-here">
+  </div>
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+
+     var queryURL = "https://www.quandl.com/api/v3/datasets/WIKI/FB/data.xml";
+      // Performing our AJAX GET request
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+        // After the data comes back from the API
+        .done(function(response) {
+          // Storing an array of results in the results variable
+          var results = response.data;
+          console.log(response);
+        });
+
+
+ </script>
+</body>
+</html>
