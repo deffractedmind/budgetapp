@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -90,11 +91,26 @@
 
     </div>
   </div>
-
+  <div id="append-here">
+  </div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
   <script src="assets/javascript/app.js" charset="utf-8"></script>
-</body>
+  <script type="text/javascript">
 
+     var queryURL = "https://www.quandl.com/api/v3/datasets/WIKI/FB/data.xml";
+      // Performing our AJAX GET request
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+        // After the data comes back from the API
+        .done(function(response) {
+          // Storing an array of results in the results variable
+          var results = response.data;
+          console.log(response);
+        });
+ </script>
+</body>
 </html>
