@@ -1,0 +1,147 @@
+#logo {
+  margin-top: 25%;
+  width: 100px;
+  height: 100px;
+}
+
+#loginButton, #budgetButton, #addQuantity, #minusQuantity, #checkOut {
+  border: none;
+  background-color: #2EC4B6;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+}
+
+#addQuantity, #minusQuantity {
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+#budgetButton {
+  margin-top: 5%;
+}
+
+#login {
+  margin-top: 10%;
+  margin-left: 35%;
+  background-color: #CBF3F0;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+#budget {
+  text-align: center;
+  background-color: #CBF3F0;
+  padding: 10px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#userBudget {
+  border-radius: 10px;
+  height: 50px;
+}
+
+#budget h2 {
+  color: #2EC4B6;
+  margin-top: -10px;
+}
+
+#budgetPriceDisplay {
+  margin-top: 5%;
+  background-color: #CBF3F0;
+  color: #2EC4B6;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.stock {
+  margin-top: 2%;
+  background-color: #CBF3F0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#displayText {
+  color: #2EC4B6;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.logos {
+  width: 64px;
+  height: 64px;
+}
+
+#checkOut {
+  margin-top: 2%;
+  margin-bottom: 20%;
+}
+
+#stockOptions {
+  text-align: center;
+}
+
+#navigation {
+  background-color: #2EC4B6;
+  border: none;
+  color: #FFFFFF;
+}
+
+#headerText {
+  color: #FFFFFF;
+}
+
+li {
+  margin: 15px;
+  margin-top: 25px;
+  font-size: 17px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+caption {
+  background-color: #2EC4B6;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+#investmentSection h2, h1 {
+  text-align: center;
+  color: #2EC4B6;
+}
+#pic{
+  width:60px;
+  height:60px;
+  border-radius: 100%;
+  margin-top: 10px;
+}

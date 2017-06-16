@@ -1,3 +1,1 @@
 # budgetapp
-
-- Ashish: "hey guys!"

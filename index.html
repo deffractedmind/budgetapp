@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investing App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <nav id="navigation" class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+            <img id="pic" src="" alt="">
+            <h3 id="headerText" class="navbar-brand">Welcome, <span id="userName"></span></h3>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="navbar-collapse collapse in navbar-right" id="bs-example-navbar-collapse-1" aria-expanded="true" style="">
+            <ul class="nav navbar-nav navbar-left">
+              <li>Change Budget</li>
+              <li>Monitor Stocks</li>
+              <li id="logOut">Log Out</li>
+              <li class="dropdown open">
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+    <div id="login">
+      <img id="logo" src="assets/images/logo.png" alt="Logo">
+      <button id="loginButton" type="button" name="button">Login</button>
+    </div>
+    <div id="budget">
+      <h2>Enter your budget:</h2>
+      <input id="userBudget" type="text" name="" value="">
+      <button id="budgetButton" type="button" name="button">confirm</button>
+    </div>
+    <div id="budgetPriceDisplay">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Your Budget:</h3>
+          <h2>$<span id="chosenBudget"></span></h2>
+        </div>
+        <div class="col-md-6">
+          <h3>Price of selected stocks:</h3>
+          <h2>$<span id="selectedStocksPrice"></span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="displayText">
+      <h2>Here are some stocks you can invest in:</h2>
+    </div>
+    <div id="stockOptions">
+
+    </div>
+    <button id="checkOut" type="button" name="button"><h4>Check out here!</h4></button>
+    <div id="investmentSection">
+      <h2>Here are your returns: </h2>
+      <h1><span id="returns"></span> $</h1>
+      <table>
+        <caption>Your Investments</caption>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Purchase Date</th>
+            <th>Price Purchased</th>
+            <th>Quantity</th>
+            <th>Today</th>
+            <th>Price Today</th>
+            <th>Gain/Loss</th>
+          </tr>
+          <div id="userInvestments">
+            <!-- will we even use this? -->
+          </div>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <script src="assets/javascript/app.js" charset="utf-8"></script>
+</body>
+
+</html>
