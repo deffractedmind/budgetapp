@@ -9,12 +9,12 @@ $(document).ready(function() {
     storageBucket: "budgetapp-857ba.appspot.com",
     messagingSenderId: "93264138315"
   };
+  
   var purchasePrice;
-
   firebase.initializeApp(config);
 
   var provider = new firebase.auth.GoogleAuthProvider();
-
+  
   var database = firebase.database();
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -199,6 +199,7 @@ $(document).ready(function() {
     localStorage.removeItem("name");
     localStorage.removeItem("picture");
     localStorage.removeItem("budget");
+
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
       console.log("You've signed out");
@@ -209,7 +210,4 @@ $(document).ready(function() {
       // An error happened.
     });
   });
-
-  // TODO: Code integration
-
 })
