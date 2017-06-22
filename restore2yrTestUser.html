@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bond API Test</title>
+</head>
+<body>
+  <div id="append-here">
+  </div>
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <script type="text/javascript">
+
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD0OYNbm34rfCoN1UnggDuQfNnr8ahcVs0",
+      authDomain: "budgetapp-857ba.firebaseapp.com",
+      databaseURL: "https://budgetapp-857ba.firebaseio.com",
+      projectId: "budgetapp-857ba",
+      storageBucket: "budgetapp-857ba.appspot.com",
+      messagingSenderId: "93264138315"
+    };
+    firebase.initializeApp(config);
+    // Create a variable to reference the database
+    var database = firebase.database();
+    /////////////////////////////////////////
+    ////////// change thse variables to reset the test 2yr user
+    var testGUID = 'rQjfQYyeN3Zm7pAryOtF6URcV3o1';
+    var testBudget = 1500.00;
+    var testBalanceQuantity = 11;
+    var testPurchaseDate = '2015-06-24';
+    var testPurchasePrice = 128.11;
+    var testPurchaseQuantity = 11;
+    var testSellDate = '';
+    var testSellPrice = 0.00;
+    var testSellQuantity = 0;
+    var testStockName = 'Apple Inc (AAPL)';
+    var testTicker = 'AAPL'
+    /////////////////////////////////////////
+    ////////// do not change anything after this line
+
+
+    // create sample 2-year old user for testing
+    database.ref('user/'+testGUID).child('account').update({
+        balance: testBudget,
+        budget: testBudget
+              }); //END append dato to firebaseDB
+    database.ref('user/'+testGUID).child('transactions').update({
+        balanceQuantity: testBalanceQuantity,
+        purchaseDate: testPurchaseDate,
+        purchasePrice: testPurchasePrice,
+        purchaseQuantity: testPurchaseQuantity,
+        sellDate: testSellDate,
+        sellPrice: testSellPrice,
+        sellQuantity: testSellQuantity,
+        stockName: testStockName,
+        ticker: testTicker
+    }); //END append dato to firebaseDB
+
+</script>
+</body>
+</html>
